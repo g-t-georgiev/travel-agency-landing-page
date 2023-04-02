@@ -1,0 +1,55 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    min-block-size: 100vh;
+    text-rendering: optimizeSpeed;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+:is(ul, ol)[role="list"] {
+    list-style-type: none;
+}
+
+:is(blockquote, q) {
+    quotes: none;
+}
+
+:is(blockquote, q)::after, 
+:is(blockquote, q)::before {
+    content: '';
+    content: none;
+}
+
+:is(img, picture, svg, video, iframe) {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+button {
+    all: unset;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+
+    html:focus-within {
+        scroll-behavior: smooth;
+    }
+
+}

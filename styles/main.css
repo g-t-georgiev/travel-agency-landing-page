@@ -1,0 +1,284 @@
+/* General styles */
+
+body {
+    color: #000;
+    background-color: #fff;
+
+    font-family: Poppins, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+a {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Section content wrapper */
+
+.wrapper {
+    max-inline-size: 1180px;
+    margin-inline: auto;
+}
+
+/* Logo styles */
+
+.logo {
+    font-weight: 700;
+    font-size: 1.9rem;
+}
+
+/* Button styles */
+
+.button {
+    background-color: #fff;
+    color: #000;
+
+    font-size: 1rem;
+
+    display: inline-block;
+    padding: .5em 2em;
+    
+    border: 1px solid #370511;
+    border-radius: 24px;
+
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: #370511;
+    color: #fff;
+}
+
+/* Header section styles */
+
+#page-header {
+    block-size: 75vh;
+    max-block-size: 75vh;
+    padding: 3rem;
+
+    background-color: #078b82;
+    background-image: 
+        linear-gradient(
+            90deg, 
+            rgba(0, 0, 0, .55), 
+            rgba(0, 0, 0, .25), 
+            rgba(0, 0, 0, .55)
+        ), 
+        url('../images/landing-photo.jpg');
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 43%;
+}
+
+#page-header .wrapper {
+    block-size: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation section styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Navigation link styles only */
+
+.navbar__navigation-link:not(.button) {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+/* Hero section styles */
+
+.hero {
+    margin-block: auto;
+}
+
+.hero__heading {
+    font-weight: 700;
+    font-size: 3rem;
+
+    margin-block-end: .95em;
+}
+
+.hero__heading .subheading {
+    font-weight: 600;
+    font-size: 2rem;
+
+    display: block;
+    margin-block-start: .5em;
+}
+
+.hero__description {
+    line-height: 1.5;
+    font-size: 1.2rem;
+
+    margin-block-end: 2em;
+}
+
+.hero .button {
+    font-size: 1rem;
+}
+
+/* Main content section styles */
+
+.main-content {
+    background-color: #fff;
+    padding: 5rem 3rem;
+}
+
+.section-heading {
+    font-weight: 700;
+    font-size: 2.35rem;
+    text-align: center;
+    color: #000;
+
+    margin-block-end: .35em;
+}
+
+.section-label {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #777;
+
+    margin-block-end: 3rem;
+}
+
+/* Famouse places section styles */
+
+.destinations-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.destination {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.destination-thumbnail {
+    inline-size: 100%;
+    min-block-size: 300px;
+    max-block-size: 300px;
+    object-fit: cover;
+}
+
+.destination-info {
+    padding: 1.5rem 1.5rem 1rem;
+}
+
+.destination-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    margin-block-end: 1.5rem;
+}
+
+.destination-desc {
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+.destination .button {
+    font-weight: 600;
+    text-align: center;
+
+    align-self: center;
+
+    margin-block-start: 1.35rem;
+    padding: 1rem 2.2rem;
+
+    border-radius: 18% / 65%;
+}
+
+/* Footer section styles */
+
+#page-footer {
+    background-color: #000;
+    color: #fff;
+
+    padding: 3rem;
+}
+
+.footer-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+:where(.footer-navbar) .socials {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem 1.75rem;
+}
+
+:where(.footer-navbar .socials) .socials-label {
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+.footer-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem 4rem;
+}
+
+.footer-link:nth-child(-n+4) {
+    grid-column: 1 / span 1;
+}
+
+.footer-link:nth-child(n+5) {
+    grid-column: 2 / span 1;
+}
+
+.footer-link:is(
+    :nth-child(1),
+    :nth-child(5)
+) {
+    grid-row: 1 / 2;
+}
+
+.footer-link:is(
+    :nth-child(2),
+    :nth-child(6)
+) {
+    grid-row: 2 / 3;
+}
+
+.footer-link:is(
+    :nth-child(3),
+    :nth-child(7)
+) {
+    grid-row: 3 / 4;
+}
+
+.footer-link:is(
+    :nth-child(4),
+    :nth-child(8)
+) {
+    grid-row: 4 / 5;
+}
